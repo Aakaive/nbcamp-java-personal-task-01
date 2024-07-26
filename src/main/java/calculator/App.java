@@ -31,7 +31,7 @@ public class App {
             cmd = sc.nextLine();
 
             if(cmd.equals("inquiry")) {
-                System.out.println(cal.getList());
+                cal.viewResults();
             }
 
             System.out.print("더 계산하시겠습니까? (exit 입력 시 종료) : ");

@@ -48,6 +48,10 @@ public class Calculator {
     public void removeFirstIndex(){
         list.remove(0);
     }
+
+    public void viewResults(){
+        System.out.println(list);
+    }
 }
 
 class DevideTest {
