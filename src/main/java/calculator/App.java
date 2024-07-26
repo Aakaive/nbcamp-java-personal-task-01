@@ -1,5 +1,6 @@
 package calculator;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class App {
@@ -24,14 +25,16 @@ public class App {
             System.out.print("가장 먼저 저장된 연산 결과를 삭제하시겠습니까? (remove 입력 시 삭제) : ");
             String cmd = sc.nextLine();
             if(cmd.equals("remove")) {
-                cal.list.remove(0);
+                List<Integer> list = cal.getList();
+                list.remove(0);
+                cal.setList(list);
             }
 
             System.out.print("저장된 연산결과를 조회하시겠습니까? (inquiry 입력 시 조회) : ");
             cmd = sc.nextLine();
 
             if(cmd.equals("inquiry")) {
-                System.out.println(cal.list);
+                System.out.println(cal.getList());
             }
 
             System.out.print("더 계산하시겠습니까? (exit 입력 시 종료) : ");

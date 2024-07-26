@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Calculator {
-    List<Integer> list = new ArrayList<>();
+    private List<Integer> list = new ArrayList<>();
     public int calculate(int a, int b, char c) {
         int result = 0;
         DevideTest dt = new DevideTest();
@@ -35,6 +35,13 @@ public class Calculator {
         list.add(result);
 
         return result;
+    }
+    public List<Integer> getList() {
+        return list;
+    }
+
+    public void setList(List<Integer> list) {
+        this.list = list;
     }
 }
 
