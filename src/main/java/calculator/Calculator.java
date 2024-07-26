@@ -4,7 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Calculator {
-    private List<Integer> list = new ArrayList<>();
+    private List<Integer> list;
+    public Calculator() {
+        list = new ArrayList<>();
+    }
     public int calculate(int a, int b, char c) {
         int result = 0;
         DevideTest dt = new DevideTest();
