@@ -41,15 +41,21 @@ public class App {
                     break;
             }
 
-            if(count < 10) {
+            if(count < intArr.length) {
                 intArr[count] = result;
                 count++;
             }
+            else {
+                for(int i=1; i<intArr.length; i++){
+                    intArr[i-1] = intArr[i];
+                }
+                intArr[intArr.length-1] = result;
+            }
 
             System.out.println("결과 : " + result);
-            for(int i : intArr) {
-                System.out.println("지난 결과 : " + i);
-            }
+//            for(int i : intArr) {
+//                System.out.println("지난 결과 : " + i);
+//            }
 
             System.out.print("더 계산하시겠습니까? (exit 입력 시 종료) : ");
             String str = sc.nextLine();
