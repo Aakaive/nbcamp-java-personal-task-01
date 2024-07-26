@@ -1,7 +1,12 @@
 package calculator;
 
-public class MultiplyOperator {
-    public double operate(int a, int b) {
-        return a * b;
+public class MultiplyOperator extends Operator {
+    public MultiplyOperator(int a, int b) {
+        super(a, b);
+    }
+
+    @Override
+    public double operate() {
+        return getA() * getB();
     }
 }
