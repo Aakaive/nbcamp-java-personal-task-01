@@ -1,13 +1,14 @@
 package calculator;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class App {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int[] intArr = new int[10];
-        int count = 0;
+        List<Integer> list = new ArrayList<>();
 
         while(true) {
             int result = 0;
@@ -41,26 +42,24 @@ public class App {
                     break;
             }
 
-            if(count < intArr.length) {
-                intArr[count] = result;
-                count++;
+            System.out.println("결과 : " + result);
+
+            System.out.print("가장 먼저 저장된 연산 결과를 삭제하시겠습니까? (remove 입력 시 삭제) : ");
+            String cmd = sc.nextLine();
+            if(cmd.equals("remove")) {
+                list.remove(0);
+                list.add(result);
             }
             else {
-                for(int i=1; i<intArr.length; i++){
-                    intArr[i-1] = intArr[i];
-                }
-                intArr[intArr.length-1] = result;
+                list.add(result);
             }
 
-            System.out.println("결과 : " + result);
-//            for(int i : intArr) {
-//                System.out.println("지난 결과 : " + i);
-//            }
+//            System.out.println(list);
 
             System.out.print("더 계산하시겠습니까? (exit 입력 시 종료) : ");
-            String str = sc.nextLine();
+            cmd = sc.nextLine();
 
-            if(str.equals("exit")) break;
+            if(cmd.equals("exit")) break;
         }
     }
 }
