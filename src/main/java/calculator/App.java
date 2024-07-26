@@ -54,7 +54,12 @@ public class App {
                 list.add(result);
             }
 
-//            System.out.println(list);
+            System.out.print("저장된 연산결과를 조회하시겠습니까? (inquiry 입력 시 조회) : ");
+            cmd = sc.nextLine();
+
+            if(cmd.equals("inquiry")) {
+                System.out.println(list);
+            }
 
             System.out.print("더 계산하시겠습니까? (exit 입력 시 종료) : ");
             cmd = sc.nextLine();
