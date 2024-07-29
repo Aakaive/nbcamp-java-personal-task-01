@@ -12,7 +12,6 @@ public class Calculator {
     public List<Double> getList() {
         return list;
     }
-
     public void setList(List<Double> list) {
         this.list = list;
     }
