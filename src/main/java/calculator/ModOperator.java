@@ -1,12 +1,7 @@
 package calculator;
 
-public class ModOperator extends Operator {
-    public ModOperator(int a, int b) {
-        super(a, b);
-    }
-
-    @Override
-    public double operate() {
-        return  getA() % getB();
+public class ModOperator extends Operator {@Override
+    public double operate(double a, double b) {
+        return  a % b;
     }
 }

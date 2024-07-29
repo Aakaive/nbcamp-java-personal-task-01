@@ -1,12 +1,9 @@
 package calculator;
 
 public class AddOperator extends Operator {
-    public AddOperator(int a, int b) {
-        super(a, b);
-    }
 
     @Override
-    public double operate() {
-        return getA() + getB();
+    public double operate(double a, double b) {
+        return super.operate(a, b);
     }
 }

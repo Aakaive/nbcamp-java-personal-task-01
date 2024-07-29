@@ -1,12 +1,8 @@
 package calculator;
 
 public class SubtractOperator extends Operator {
-    public SubtractOperator(int a, int b) {
-        super(a, b);
-    }
-
     @Override
-    public double operate() {
-        return getA() - getB();
+    public double operate(double a, double b) {
+        return a - b;
     }
 }

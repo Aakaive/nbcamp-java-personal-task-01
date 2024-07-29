@@ -11,6 +11,7 @@ public class App {
 
         Scanner sc = new Scanner(System.in);
 
+
         while(true) {
             System.out.println("1. 원의 넓이 구하기");
             System.out.println("2. 사칙연산");
@@ -37,28 +38,28 @@ public class App {
             else if(num == 2) {
                 cal = aCal;
                 System.out.print("첫 번째 숫자를 입력하세요: ");
-                int a;
+                double a;
                 try{
-                    a = sc.nextInt();
+                    a = sc.nextDouble();
                 } catch (InputMismatchException e){
                     System.out.println(e.getMessage());
-                    sc.next();
+                    sc.nextLine();
                     continue;
                 }
                 System.out.print("두 번째 숫자를 입력하세요: ");
-                int b;
+                double b;
                 try{
-                    b = sc.nextInt();
+                    b = sc.nextDouble();
                 } catch (InputMismatchException e){
                     System.out.println(e.getMessage());
-                    sc.next();
+                    sc.nextLine();
                     continue;
                 }
                 System.out.print("사칙연산 기호를 입력하세요: ");
                 char c = sc.next().charAt(0);
                 sc.nextLine();
 
-                System.out.println("결과: " + aCal.calculateArithmetic(a, b, c));
+                aCal.calculateArithmetic(a, b, c);
             }
             else {
                 continue;
